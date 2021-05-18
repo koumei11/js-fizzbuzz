@@ -41,21 +41,21 @@ function displayOutputs(fizz, buzz) {
 
     while (fizzNumInt < 100 || buzzNumInt < 100) {
 
-        const span = document.createElement('SPAN');
+        const fizzBuzzSpan = document.createElement('SPAN');
 
         if (fizzNumInt  < buzzNumInt) {
-            span.textContent = `Fizz ${fizzNumInt}`;
+            fizzBuzzSpan.textContent = `Fizz ${fizzNumInt}`;
             fizzNumInt += cashedFizz;
         } else if (fizzNumInt > buzzNumInt) {
-            span.textContent = `Buzz ${buzzNumInt}`;
+            fizzBuzzSpan.textContent = `Buzz ${buzzNumInt}`;
             buzzNumInt += cashedBuzz;
         } else if (fizzNumInt === buzzNumInt) {
-            span.textContent = `FizzBuzz ${fizzNumInt}`;
+            fizzBuzzSpan.textContent = `FizzBuzz ${fizzNumInt}`;
             fizzNumInt += cashedFizz;
             buzzNumInt += cashedBuzz;
         }
 
-        outputDiv.appendChild(span);
+        outputDiv.appendChild(fizzBuzzSpan);
         outputDiv.appendChild(document.createElement('BR'));
     } 
 }
